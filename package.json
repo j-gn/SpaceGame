@@ -1,0 +1,41 @@
+{
+  "name": "SpaceGameServer",
+  "version": "0.1.0",
+  "author": "Johannes Gotlén <johannes@gotlen.se>",
+  "description": "SpaceGame Server",
+  "contributors": [
+    "Johannes Gotlén <johannes@gotlen.se>"
+  ],
+  "bin": {
+    "http-server": "./bin/http-server"
+  },
+  "scripts": {
+    "start": "node ./bin/http-server",
+    "test": "nodeunit tests",
+    "predeploy": "echo This will be run before deploying the app",
+    "postdeploy": "echo This will be run after deploying the app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substans/AwesomeCanvasServer.git"
+  },
+  "keywords": [
+    "canvas",
+    "awesome",
+    "server"
+  ],
+  "dependencies": {
+    "net": "1.0.x", 
+    "socket.io": "*"
+  },
+  "analyze": true,
+  "devDependencies": {
+    "nodeunit": "0.7.x"
+  },
+  "bundledDependencies": [],
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  },
+  "optionalDependencies": {}
+}
