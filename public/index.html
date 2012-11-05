@@ -18,10 +18,20 @@ body,canvas,html {
 
 </style></head><body onLoad="Begin()">
 <script type="text/javascript">
+var files = [	
+			'three.js',
+			'BokehShader.js', 
+			'states/freeFlightState.js',
+			'app.js'
+		 ];
 function Begin(){
-	var number = Math.floor(Math.random() * 10000).toString()
-	head.js("js/three.js?n=" + number,"js/BokehShader.js?n=" + number,"js/app.js?n=" + number, function(){
-		//all done
+	//use random number to supress browser cache!
+	var number = Math.floor(Math.random() * 10000).toString() 
+	files.forEach(function(filename){
+		head.js("js/"+filename + "?n=" + number);
+	})
+	head(function(){
+		var a = new window.App();
 	});
 }
 </script></body></html>
